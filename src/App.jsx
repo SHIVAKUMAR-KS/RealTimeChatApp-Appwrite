@@ -1,7 +1,10 @@
 import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoutes from './utils/PrivateRoutes'
+
+
 
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
@@ -26,6 +29,7 @@ function App() {
                     <Route path="/" element={<Room/>}/>
                 </Route>
           </Routes>
+          <ToastContainer/>
         </AuthProvider>
       </Router>
     

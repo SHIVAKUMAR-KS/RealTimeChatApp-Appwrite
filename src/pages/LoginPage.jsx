@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useAuth } from '../utils/AuthContext'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'; // Import toast
 import '../index.css'
 
 
@@ -24,6 +25,16 @@ const LoginPage = () => {
       setCredentials({...credentials, [name]:value})
       // console.log('CREDS:', credentials)
     }
+    const onSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        await handleUserLogin(credentials);
+        toast.success('Login successful!');
+      } catch (error) {
+        toast.error('Login failed. Please check your credentials.');
+      }
+    };
+  
 
   return (
 
