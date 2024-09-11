@@ -25,15 +25,15 @@ const LoginPage = () => {
       setCredentials({...credentials, [name]:value})
       // console.log('CREDS:', credentials)
     }
-    const onSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        await handleUserLogin(credentials);
-        toast.success('Login successful!');
-      } catch (error) {
-        toast.error('Login failed. Please check your credentials.');
-      }
-    };
+    // const onSubmit = async (e) => {
+    //   e.preventDefault();
+    //   try {
+    //     await handleUserLogin(credentials);
+    //     toast.success('Login successful!');
+    //   } catch (error) {
+    //     toast.error('Login failed. Please check your credentials.');
+    //   }
+    // };
   
 
   return (
