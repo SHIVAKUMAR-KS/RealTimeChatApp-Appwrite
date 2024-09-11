@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react'
 import { useAuth } from '../utils/AuthContext'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
-import { toast } from 'react-toastify'; 
+//import { toast } from 'react-toastify'; 
 import '../index.css'
+import toast, { Toaster } from 'react-hot-toast';
 
-
+const notify = () => toast('Here is your toast.');
 const LoginPage = () => {
     const {user, handleUserLogin} = useAuth()
     const [credentials, setCredentials] = useState({email:"", password:""})
